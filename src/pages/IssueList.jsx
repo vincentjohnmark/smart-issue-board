@@ -79,7 +79,7 @@ export default function IssueList() {
           </div>
 
           <div className="issue-meta">
-            <span>Priority: {issue.priority}</span>
+            <span>Priority: {issue.priority}</span><br></br>
             <span>Assigned to: {issue.assignedTo}</span>
           </div>
 
