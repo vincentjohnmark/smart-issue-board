@@ -1,16 +1,41 @@
-# React + Vite
+# Smart Issue Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Smart Issue Board is a responsive issue tracking web application built with **React** and **Firebase**, enabling authenticated users to create, assign, and manage issues in real time. The project demonstrates frontend component structuring, state management, and seamless integration with Firebase Authentication and Cloud Firestore.
 
-Currently, two official plugins are available:
+## ✨ Features
+- User authentication with Firebase
+- Create, assign, and track issues
+- Priority-based issue management
+- Real-time updates using Cloud Firestore
+- Enforced issue workflow (Open → In Progress → Done)
+- Duplicate issue detection with user confirmation
+- Responsive and clean UI layout
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
+- **Frontend:** React (Vite), JavaScript, HTML5, CSS3
+- **Backend / Database:** Firebase Authentication, Cloud Firestore
+- **Version Control:** Git & GitHub
 
-## React Compiler
+## 🚀 Getting Started
+```bash
+npm install
+npm run dev
+```
+Environment variables are managed using .env and are not committed to the repository.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+📌 Notes
+This project was built to simulate a real-world internal tool and demonstrate practical frontend development skills, including UI structuring, real-time data handling, and cloud integration.
 
-## Expanding the ESLint configuration
+Save the file.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✅ STEP 2 — Commit README update
+
+Run:
+
+```bash
+git add README.md
+git commit -m "Update README with project description"
+git push
+```
