@@ -18,9 +18,13 @@ export default function IssueList() {
     const q = query(collection(db, "issues"), orderBy("createdAt", "desc"));
     const unsub = onSnapshot(q, snapshot => {
       setIssues(
-        snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+        snapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
       );
     });
+
     return () => unsub();
   }, []);
 
@@ -29,7 +33,10 @@ export default function IssueList() {
       alert("Move issue to In Progress before marking it Done.");
       return;
     }
-    await updateDoc(doc(db, "issues", issue.id), { status: newStatus });
+
+    await updateDoc(doc(db, "issues", issue.id), {
+      status: newStatus,
+    });
   };
 
   const filteredIssues = issues.filter(issue => {
@@ -43,6 +50,11 @@ export default function IssueList() {
     if (status === "Open") return "badge badge-open";
     if (status === "In Progress") return "badge badge-progress";
     return "badge badge-done";
+  };
+
+  const formatDate = timestamp => {
+    if (!timestamp) return "—";
+    return timestamp.toDate().toLocaleString();
   };
 
   return (
@@ -79,8 +91,10 @@ export default function IssueList() {
           </div>
 
           <div className="issue-meta">
-            <span>Priority: {issue.priority}</span><br></br>
-            <span>Assigned to: {issue.assignedTo}</span>
+            <span>Priority: {issue.priority}</span><br />
+            <span>Assigned to: {issue.assignedTo}</span><br />
+            <span>Created by: {issue.createdBy}</span><br />
+            <span>Created at: {formatDate(issue.createdAt)}</span>
           </div>
 
           <select
