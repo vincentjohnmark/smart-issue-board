@@ -25,9 +25,6 @@ Environment variables are managed using .env and are not committed to the reposi
 📌 Notes
 This project was built to simulate a real-world internal tool and demonstrate practical frontend development skills, including UI structuring, real-time data handling, and cloud integration.
 
-yaml
-Copy code
-
 Save the file.
 
 ---
