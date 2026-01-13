@@ -20,6 +20,7 @@ Smart Issue Board is a responsive issue tracking web application built with **Re
 ```bash
 npm install
 npm run dev
+```
 Environment variables are managed using .env and are not committed to the repository.
 
 📌 Notes
@@ -37,3 +38,4 @@ Run:
 git add README.md
 git commit -m "Update README with project description"
 git push
+```
